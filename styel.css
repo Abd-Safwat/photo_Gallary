@@ -1,0 +1,57 @@
+:root{
+    --main-color: #2B2A4C;
+    --seconder-color: #B31312;
+    --background-main-color: #EA906C;
+    --background-seconder-color: #C3ACD0;
+    --background-third-color: #7743DB;
+    --background-last-color: #F7EFE5;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background-color: var(--background-last-color);
+}
+
+.header{
+ text-transform: uppercase;
+ text-align: center;
+ padding: 32px;
+ color: var(--background-third-color);
+ background: var(--background-main-color);
+ border-bottom: 4px solid var(--background-seconder-color);
+}
+
+.gallery{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 16px;
+}
+
+.gallery::after{
+    content: "";
+    width: 350px;
+}
+
+.gallery img{
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+    /* Sometimes I'm heat this */
+    object-fit: cover;
+    border-radius: 10px;
+}
